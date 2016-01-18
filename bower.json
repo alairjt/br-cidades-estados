@@ -1,0 +1,30 @@
+{
+  "name": "br-cidades-estados",
+  "version": "0.1.0",
+  "main": "./cidades-estados.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {},
+  "homepage": "https://github.com/alairjt/br-cidades-estados",
+  "authors": [
+    "Alair JT <alairjt@gmail.com>"
+  ],
+  "description": "Utilitário AngularJS - Cidades e Estados brasileiros",
+  "moduleType": [],
+  "keywords": [
+    "angular",
+    "utils",
+    "util",
+    "angularjs",
+    "estados",
+    "cidades",
+    "brasil",
+    "brazil"
+  ],
+  "license": "MIT"
+}
