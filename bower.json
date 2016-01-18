@@ -1,6 +1,6 @@
 {
   "name": "br-cidades-estados",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "./cidades-estados.js",
   "ignore": [
     "**/.*",
