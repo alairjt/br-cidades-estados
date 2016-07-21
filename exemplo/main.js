@@ -8,4 +8,4 @@ angular.module('main', ['br.cidades.estados']).controller('Ctrl', function($scop
 		$scope.c = brCidadesEstados.buscarCidadesPorSigla($scope.e);
 		console.log( brCidadesEstados.buscarCidadesPorSigla($scope.e) );
 	}
-})
+});
