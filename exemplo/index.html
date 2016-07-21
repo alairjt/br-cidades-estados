@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="main">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Exemplo br-cidades-estados</title>
+</head>
+<body ng-controller="Ctrl">
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+	 <script src="main.js"></script>
+	 <script src="../cidades-estados.js"></script>
+
+	 <h1>Exemplo br-cidades-estados</h1>
+
+	<select ng-model="e" ng-options="x.sigla as x.nome for x in estados" ng-change="buscandoCidades()">
+		<option value="">Escolha um Estado</option>
+	</select>
+
+	<select ng-model="cidade_escolhida" ng-options="cidades for cidades in c">
+		<option value="">Escolha uma cidade</option>
+	</select>
+
+	<br><br>
+	Estado escolhido: {{e}}<br>
+	Cidade escolhida: {{cidade_escolhida}}<br>
+
+</body>
+</html>
