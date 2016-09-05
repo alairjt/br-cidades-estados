@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="demo">
+    <head>
+        <meta charset="utf-8">
+        <title>AngularJS br-cidades-estados</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.js"></script>
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css">
+
+        <script src="../dist/cidades-estados.js"></script>
+    </head>
+
+    <body class="container">
+
+        <script>
+            var app = angular.module('demo', ['br.cidades.estados']);
+            
+            app.controller('DemoController', DemoController);
+            
+            function DemoController(brCidadesEstados) {
+                var vm = this;
+                vm.states = brCidadesEstados.estados;
+
+                vm.buscarCidadesPorSigla = function(sigla){
+                    vm.cities = brCidadesEstados.buscarCidadesPorSigla(sigla);
+                };
+            }
+        </script>
+        <section id="mask" ng-controller="DemoController as vm">
+            <div class="page-header">
+                <h1>br-cidades-estados
+                    <small><a href="https://github.com/alairjt/br-cidades-estados">GitHub</a></small>
+                </h1>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>What?</h3>
+
+                    <p>Select State to loading cities.</p>
+                    <form name="demo" class="form-horizontal">
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                {{selectedState}}
+                                <select id="select-state" ng-model="selectedState" ng-change="vm.buscarCidadesPorSigla(selectedState)">
+                                    <option value="">Escolha um Estado</option>
+                                    <option ng-repeat="state in vm.states" ng-value="state.sigla">
+                                        {{state.nome}}
+                                    </option>
+                                </select>
+                                <select id="select-city" ng-model="selectedCity">
+                                    <option value="">Escolha uma Cidade</option>
+                                    <option ng-repeat="city in vm.cities" ng-value="city">
+                                        {{city}}
+                                    </option>
+                                </select>
+                                <br/>
+                                <p class="help-inline">
+                                    <span id="span-state"><strong>State: {{selectedState | descricaoEstado}} </strong></span>
+                                    <br/>
+                                    <span id="span-city"><strong>City: {{selectedCity}} </strong></span>
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="col-md-6">
+                    <h3>How?</h3>
+                    <p>In HTML.</p>
+                    <pre class="prettyprint">
+&lt;select ng-model="selectedState" ng-options="state.sigla as state.nome for state in vm.states" ng-change="vm.buscarCidadesPorSigla(selectedState)"><option value="">Select a State</option>&lt;/select&gt;
+
+&lt;select ng-model="selectedCity" ng-options="cidade for cidade in vm.cities">  <option value="">Select a City</option>&lt;/select&gt;
+                    </pre>
+                    <p>In Javascript.</p>
+                    <pre class="prettyprint">
+var app = angular.module('demo', ['br.cidades.estados']);
+            
+app.controller('DemoController', DemoController);
+
+function DemoController(brCidadesEstados) {
+    var vm = this;
+    vm.states = brCidadesEstados.estados;
+
+    vm.buscarCidadesPorSigla = function(sigla){
+        vm.cities = brCidadesEstados.buscarCidadesPorSigla(sigla);
+    };
+}
+                    </pre>
+                </div>
+            </div>
+        </section>
+
+    </body>
+</html>

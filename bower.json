@@ -1,30 +1,38 @@
 {
-  "name": "br-cidades-estados",
-  "version": "0.1.1",
-  "main": "./cidades-estados.js",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {},
-  "homepage": "https://github.com/alairjt/br-cidades-estados",
-  "authors": [
-    "Alair JT <alairjt@gmail.com>"
-  ],
-  "description": "Utilitário AngularJS - Cidades e Estados brasileiros",
-  "moduleType": [],
-  "keywords": [
-    "angular",
-    "utils",
-    "util",
-    "angularjs",
-    "estados",
-    "cidades",
-    "brasil",
-    "brazil"
-  ],
-  "license": "MIT"
+    "name": "cidades-estados",
+    "version": "1.0.0",
+    "homepage": "https://github.com/alairjt/enter",
+    "authors": [
+        "alair.tavares <alair.tavares@nexxera.com>"
+    ],
+    "description": "Utilitário AngularJS - Cidades e Estados brasileiros.",
+    "main": "dist/cidades-estados.js",
+    "dependencies": {
+        "angular": "^1.5.0",
+        "angular-mocks": "^1.5.0",
+        "jquery": "^3.1.0"
+    },
+    "keywords": [
+        "AngularJS",
+        "Angular",
+        "directive",
+        "onenter",
+        "enter",
+        "press",
+        "key",
+        "onkeypress",
+        "keypress",
+        "custom",
+        "apply",
+        "generic",
+        "value"
+    ],
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ]
 }
