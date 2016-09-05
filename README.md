@@ -49,3 +49,10 @@ Utilitário AngularJS - Cidades e Estados brasileiros
         <option value="">Escolha uma Cidade</option>
     </select>
    ```
+
+### How to release
+
+Use gulp to bump version, build and create a tag. Then push to GitHub:
+
+gulp release [--patch|--minor|--major]
+git push --tags origin master # push everything to GitHub
