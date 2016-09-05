@@ -1,7 +1,7 @@
 /*!
  * enter
  * https://github.com/alairjt/br-cidades-estados
- * Version: 1.0.4 - 2016-09-05T13:15:10.843Z
+ * Version: 1.0.4 - 2016-09-05T13:23:48.225Z
  * License: MIT
  */
 
