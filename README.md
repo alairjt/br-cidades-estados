@@ -6,14 +6,34 @@ Utilitário AngularJS - Cidades e Estados brasileiros
 **With Bower**
 * Install the dependency:
 
-   ```javascript
-   bower install br-cidades-estados --save
+   ```sh
+   bower install br-cidades-estados
    ```
 * Include module dependency:
 
    ```javascript
-   angular.module('yourApp', ['br.cidades.estados']);
+   angular.module('myApp', ['br.cidades.estados']);
    ```
+
+**With NPM**
+* Install the dependency:
+
+    ```sh
+    npm install br-cidades-estados
+    ```
+* Include module dependency:
+    ```javascript
+    // CommonJS
+    var brCidadesEstados = require('br-cidades-estados');
+    angular.module('myApp', [brCidadesEstados, ...]);
+    ```
+
+    ```javascript
+    // ES6 module
+    import brCidadesEstados from 'br-cidades-estados';
+    angular.module('myApp', [brCidadesEstados, ...]);
+    ```
+
 
 ### How To Use
 
